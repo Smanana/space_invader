@@ -23,7 +23,7 @@ class Ship():
         #Movement Flag
         self.moving_right = False
         self.moving_left = False
-        self.moving_up = False
+        #self.moving_up = False
 
     def update(self):
         """Update the ship's position baed on the movement flag"""
@@ -33,8 +33,8 @@ class Ship():
         if self.moving_left and self.rect.left > 0:
             self.center -= self.alien_invasion_settings.ship_speed_factor
 
-        if self.moving_up and self.rect.up < self.screen_rect.up:
-            self.center += self.alien_invasion_settings.ship_speed_factor
+        # if self.moving_up and self.rect.up < self.screen_rect.up:
+        #     self.center += self.alien_invasion_settings.ship_speed_factor
         #Update rect object from self.center
         self.rect.centerx =self.center
     def blitme(self):
